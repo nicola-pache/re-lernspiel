@@ -26,7 +26,7 @@ export default function ResultsPage() {
     cucumber: true,
     onion: false,
     lettuce: true,
-    tomato: true,
+    tomato: false,
     avocado: false,
   };
 
@@ -77,6 +77,7 @@ export default function ResultsPage() {
       variants: [
         "Das Sandwich soll grüne Zutaten enthalten außer Avocado.",
         "Das Sandwich muss grüne Zutaten enthalten außer Avocado.",
+        "Das Sandwich soll nicht Avocado enthalten.",
       ],
     },
     {
@@ -133,7 +134,6 @@ export default function ResultsPage() {
           <>
             <SandwichPreview selection={sandwich} />
 
-            {/* --- Freigeschaltetes Prinzip --- */}
             <div className="principle-unlocked">
               <h3>Freigeschaltet: Grundprinzip 1 – Wertorientierung</h3>
               <p>
