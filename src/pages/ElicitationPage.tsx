@@ -22,11 +22,11 @@ export default function AnforderungserhebungPage() {
   );
 
   useEffect(() => {
-  if (!showIntro && !hasPlayedRef.current) {
-    hasPlayedRef.current = true;
-    playMessages(currentNode);
-  }
-}, [showIntro, currentNode]);
+    if (!showIntro && !hasPlayedRef.current) {
+      hasPlayedRef.current = true;
+      playMessages(currentNode);
+    }
+  }, [showIntro, currentNode]);
 
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -96,9 +96,9 @@ export default function AnforderungserhebungPage() {
           messages={[
             "Ein Requirements Engineer sammelt Wünsche von Stakeholdern.",
             "Stakeholder? Das sind alle, die irgendwie von einem System betroffen sind; ob Auftraggeber, Entwickler oder natürlich Nutzer.",
-            "Heute redest du mit einem Auftraggeber. Und das \"System\", das er sich wünscht ist ein Sandwich!",
+            'Heute redest du mit einem Auftraggeber. Und das "System", das er sich wünscht ist ein Sandwich!',
             "Hör genau zu und notiere rechts alles, was sich der Stakeholder wünscht!",
-            "Frag ruhig nach, wenn du mehr Details willst. Aber nicht jede Frage liefert dir wirklich zusätzliche Informationen."
+            "Frag ruhig nach, wenn du mehr Details willst. Aber nicht jede Frage liefert dir wirklich zusätzliche Informationen.",
           ]}
           onClose={() => setShowIntro(false)}
         />
@@ -143,14 +143,25 @@ export default function AnforderungserhebungPage() {
 
           <NotesField value={notesText} onChange={(val) => setNotesText(val)} />
 
-          <button
+          {/*<button
             className="go-to-docs-button"
             onClick={() =>
               navigate("/documentation", { state: { notes: notesText } })
             }
           >
             Weiter zur Dokumentation
-          </button>
+          </button>*/}
+          {!isChoiceActive && !currentNode.next && (
+            <button
+              className="go-to-docs-button"
+              onClick={() =>
+                navigate("/documentation", { state: { notes: notesText } })
+              }
+            >
+              {" "}
+              Weiter zur Dokumentation{" "}
+            </button>
+          )}
         </div>
       </div>
     </>
