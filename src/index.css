@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Fira Sans";
+  src: url("/fonts/FiraSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url("/fonts/FiraSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --font-family: "Fira Sans", sans-serif;
+  --color-bg: #f8f9fa;
+  --color-text: #222;
+  --color-primary: #2b6cb0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+}

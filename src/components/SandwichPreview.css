@@ -1,0 +1,12 @@
+.sandwich-preview {
+  position: relative;
+  width: 500px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.sandwich-layer {
+  position: absolute;
+  width: 500px;
+  pointer-events: none;
+}

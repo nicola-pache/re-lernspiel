@@ -1,0 +1,39 @@
+.final-sentences {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.final-sentences h3 {
+  font-size: var(--font-size-body1);
+  margin-bottom: 8px;
+}
+
+.final-sentence-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 6px 8px;
+  margin-bottom: 6px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+
+.final-sentence-item:last-child {
+  margin-bottom: 0;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  color: var(--color-secondary);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.delete-button:hover {
+  color: #d33;
+}

@@ -1,0 +1,76 @@
+.elicitation-layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 40px;
+  align-items: start;
+  width: 90%;
+}
+
+.stakeholder-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.choice-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: var(--font-size-body1);
+}
+
+.button.next {
+  background-color: var(--color-secondary);
+}
+
+.button.next:hover {
+  background-color: var(--color-secondary-dark);
+}
+
+.button.followup {
+  background-color: var(--color-primary);
+}
+
+.button.followup:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.go-to-docs-button {
+  grid-column: 3;
+  justify-self: end;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: var(--font-size-body1);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.go-to-docs-button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.stakeholder-image {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+  border-radius: 12px;
+}

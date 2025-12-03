@@ -1,0 +1,102 @@
+.documentation-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 60px;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.final-sentences {
+  background-color: #f8f8f8;
+  padding: 16px;
+}
+
+.sentence-area {
+  background: var(--color-bg);
+  border: 1px solid var(--color-secondary-light);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 16px;
+}
+
+.constructed-sentence {
+  min-height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  background: #fff;
+  border-radius: var(--radius-small);
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.save-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-small);
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.sentence-part {
+  display: inline-flex;
+  align-items: center;
+
+  height: 36px;
+  line-height: 36px;
+  padding: 0 12px;
+  box-sizing: border-box;
+
+  border-radius: var(--radius-small);
+  cursor: grab;
+  white-space: nowrap;
+}
+
+.sentence-part:active {
+  cursor: grabbing;
+  background-color: var(--color-secondary);
+}
+
+.category-start {
+  background-color: #cce4ff;
+}
+
+
+.category-verb {
+  background-color: #fff3b0;
+}
+
+
+.category-object {
+  background-color: #d4ffd6;
+}
+
+
+.category-misc {
+  background-color: #ffd6d6;
+}
+
+.go-to-dev-button {
+  grid-column: 3;
+  justify-self: end;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: var(--font-size-body1);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.go-to-dev-button:hover {
+  background-color: var(--color-primary-dark);
+}

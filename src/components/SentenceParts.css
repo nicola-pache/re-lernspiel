@@ -1,0 +1,42 @@
+.part-block {
+  display: inline-block; /* statt block */
+  background-color: var(--color-secondary-light);
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 6px;
+  cursor: grab;
+  text-align: center;
+  width: auto; /* nur so breit wie der Text */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  white-space: nowrap; /* kein Zeilenumbruch */
+  transition: background-color 0.2s ease;
+}
+
+.parts-area {
+  background: var(--color-bg);
+  border: 1px solid var(--color-secondary-light);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 16px;
+}
+
+
+/* Modalverben */
+.category-start {
+  background-color: #cce4ff; /* helles blau */
+}
+
+/* Subjekte / Akteure */
+.category-verb {
+  background-color: #fff3b0; /* helles gelb */
+}
+
+/* Objekte (z. B. Zutaten) */
+.category-object {
+  background-color: #d4ffd6; /* helles grün */
+}
+
+/* Zeitangaben */
+.category-misc {
+  background-color: #ffd6d6; /* helles rot/pink */
+}

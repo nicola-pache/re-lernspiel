@@ -1,0 +1,63 @@
+.cody-overlay {
+  position: fixed;
+  inset: 0; /* top/right/bottom/left: 0 */
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.cody-dialog {
+  position: relative;
+  background: white;
+  border-radius: 1.5rem;
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 450px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cody-image {
+  width: 180px;
+  margin-bottom: 1rem;
+}
+
+.cody-bubble {
+  background: var(--color-secondary-light);
+  border-radius: 1rem;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+.cody-bubble::after {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 14px 14px 14px;
+  border-style: solid;
+  border-color: transparent transparent var(--color-secondary-light) transparent;
+}
+
+.cody-next {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: var(--font-size-body1);
+  cursor: pointer;
+  transition: 0.18s ease;
+}
+
+.cody-next:hover {
+  background: var(--color-primary-dark);
+}
