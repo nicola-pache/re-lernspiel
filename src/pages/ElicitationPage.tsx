@@ -22,11 +22,11 @@ export default function AnforderungserhebungPage() {
   );
 
   useEffect(() => {
-    if (!hasPlayedRef.current) {
-      hasPlayedRef.current = true;
-      playMessages(currentNode);
-    }
-  }, [currentNode]);
+  if (!showIntro && !hasPlayedRef.current) {
+    hasPlayedRef.current = true;
+    playMessages(currentNode);
+  }
+}, [showIntro, currentNode]);
 
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -95,8 +95,8 @@ export default function AnforderungserhebungPage() {
         <CodyOverlay
           messages={[
             "Ein Requirements Engineer sammelt Wünsche von Stakeholdern.",
-            "Stakeholder? Das sind alle, die später mit dem System zu tun haben.",
-            "Heute ist dieses System ein Sandwich.",
+            "Stakeholder? Das sind alle, die irgendwie von einem System betroffen sind; ob Auftraggeber, Entwickler oder natürlich Nutzer.",
+            "Heute redest du mit einem Auftraggeber. Und das \"System\", das er sich wünscht ist ein Sandwich!",
             "Hör genau zu und notiere rechts alles, was sich der Stakeholder wünscht!",
             "Frag ruhig nach, wenn du mehr Details willst. Aber nicht jede Frage liefert dir wirklich zusätzliche Informationen."
           ]}

@@ -29,16 +29,11 @@ export default function DropdownButton({
 
   return (
     <div className={`dropdown-container ${className}`}>
-      {/* Header */}
-      <button
-        className="dropdown-button"
-        onClick={() => setIsOpen(!isOpen)}
-      >
+      <button className="dropdown-button" onClick={() => setIsOpen(!isOpen)}>
         <span>{selectedValue ?? label}</span>
         <span>{isOpen ? "▲" : "▼"}</span>
       </button>
 
-      {/* Options */}
       {isOpen && (
         <div className="dropdown-list">
           {options.map((option) => (

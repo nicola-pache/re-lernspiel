@@ -17,8 +17,8 @@
 .results-right {
   flex: 1;
   display: flex;
-  flex-direction: column; /* alles untereinander */
-  gap: 24px; /* Abstand zwischen Fehleranalyse und Anforderungen */
+  flex-direction: column;
+  gap: 24px;
   background-color: #f8f8f8;
   border-radius: 8px;
   padding: 16px;
@@ -52,4 +52,25 @@
 
 .results-list li.incorrect {
   background-color: #ffd6d6;
+}
+
+.principle-unlocked {
+  margin-top: 20px;
+  padding: 16px 20px;
+  background: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.principle-unlocked h3 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-primary-dark);
+}
+
+.principle-unlocked p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--color-primary-dark);
 }

@@ -35,7 +35,6 @@ export default function ResultsPage() {
     ? keys.filter((k) => sandwich[k] !== correctSandwich[k])
     : keys.slice();
 
-  // Übersetzung der Keys
   const ingredientNames: Record<keyof SandwichSelection, string> = {
     bread: "Brot",
     glutenFree: "glutenfrei",
@@ -62,9 +61,7 @@ export default function ResultsPage() {
     {
       id: "glutenfree",
       label: "nicht glutenfrei",
-      variants: [
-        "Das Sandwich muss nicht glutenfrei sein.",
-      ],
+      variants: ["Das Sandwich muss nicht glutenfrei sein."],
     },
     {
       id: "vegetarian",
@@ -110,26 +107,20 @@ export default function ResultsPage() {
     },
   ];
 
-  // Alle gültigen Varianten flach
   const allCorrectVariants = requirementGroups.flatMap((g) => g.variants);
 
-  // Vergleich der übergebenen Anforderungen
   const comparison = finalSentences.map((sentence) => ({
     text: sentence,
     correct: allCorrectVariants.includes(sentence),
   }));
 
-  // Erfüllte Anforderungsgruppen
   const satisfiedGroups = requirementGroups.filter((group) =>
     group.variants.some((v) => finalSentences.includes(v))
   );
 
-  // Fehlende Anforderungen
   const missingGroups = requirementGroups.filter(
     (group) => !group.variants.some((v) => finalSentences.includes(v))
   );
-
-  // Falsche Anforderungen (Sätze, die in keiner Gruppe vorkommen)
 
   const correctIngredientCount = keys.length - differences.length;
 
@@ -137,15 +128,27 @@ export default function ResultsPage() {
     <div className="results-layout">
       <div className="results-left">
         <h2>Dein Sandwich</h2>
+
         {sandwich ? (
-          <SandwichPreview selection={sandwich} />
+          <>
+            <SandwichPreview selection={sandwich} />
+
+            {/* --- Freigeschaltetes Prinzip --- */}
+            <div className="principle-unlocked">
+              <h3>Freigeschaltet: Grundprinzip 1 – Wertorientierung</h3>
+              <p>
+                Ein System gilt als erfolgreich, wenn es konkrete Bedürfnisse
+                der Stakeholder adressiert und ihnen einen erkennbaren Mehrwert
+                bietet.
+              </p>
+            </div>
+          </>
         ) : (
           <p>Kein Sandwich übergeben.</p>
         )}
       </div>
 
       <div className="results-right">
-        {/* --- Anforderungen --- */}
         <section>
           <h2>Vergleich der Anforderungen</h2>
           <p className="summary-text">
@@ -172,7 +175,6 @@ export default function ResultsPage() {
           </ul>
         </section>
 
-        {/* --- Sandwich Fehleranalyse --- */}
         <section>
           <h2>Fehleranalyse Sandwich</h2>
           <p className="summary-text">
