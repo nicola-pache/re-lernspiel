@@ -21,7 +21,6 @@ export default function ChatWindow({ messages, isTyping }: ChatWindowProps) {
         <AnimatePresence>
           {messages.map((msg) => (
             <motion.div
-              key={msg.id}
               initial={{ opacity: 0, x: msg.sender === "player" ? 50 : -50 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0 }}
