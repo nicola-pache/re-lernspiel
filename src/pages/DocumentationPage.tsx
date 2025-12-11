@@ -33,7 +33,8 @@ export default function DocumentationPage() {
       {showIntro && (
         <CodyOverlay
           messages={[
-            "Ein Requirements Engineer bringt die Wünsche der Stakeholder in eine Form, die für Entwickler später leicht verständlich ist.",
+            "Ein Requirements Engineer bringt die Wünsche der Stakeholder in eine Form, die für Entwickler gut verständlich, eindeutig und überprüfbar ist.",
+            "Ein Beispiel für eine Anforderung wäre \"Das Sandwich soll Gouda enthalten.\"",
             "Nutze jetzt die Satzbausteine, um aus deinen Notizen klare Anforderungen zu schreiben.",
           ]}
           onClose={() => setShowIntro(false)}

@@ -44,9 +44,9 @@ export default function AnforderungserhebungPage() {
 
   const playMessages = async (node: ChatNode) => {
     setIsTyping(true);
-    for (const msg of node.messages) {
+    for (const text of node.stakeholderMessages) {
       await new Promise((res) => setTimeout(res, 1200));
-      setMessages((prev) => [...prev, msg]);
+      setMessages(prev => [...prev, { sender: "stakeholder", text }]);
     }
     setIsTyping(false);
 
@@ -66,8 +66,8 @@ export default function AnforderungserhebungPage() {
 
     const playerText =
       choice === "next"
-        ? currentNode.playerTextNext
-        : currentNode.playerTextFollowUp;
+        ? currentNode.playerNext
+        : currentNode.playerFollowUp;
 
     const nextNodeId =
       choice === "next" ? currentNode.next : currentNode.followUp;
@@ -76,7 +76,6 @@ export default function AnforderungserhebungPage() {
 
     if (playerText) {
       const playerMsg: ChatMessage = {
-        id: Date.now(),
         sender: "player",
         text: playerText,
       };
