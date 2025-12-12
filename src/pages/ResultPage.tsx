@@ -92,8 +92,8 @@ export default function ResultsPage() {
       id: "cheese-mozzarella",
       label: "Mozzarella-Käse",
       variants: [
-        "Das Sandwich soll Mozzarella enthalten.",
-        "Das Sandwich muss Mozzarella enthalten.",
+        "Das Sandwich soll Mozzarella-Käse enthalten.",
+        "Das Sandwich muss Mozzarella-Käse enthalten.",
       ],
     },
     {
