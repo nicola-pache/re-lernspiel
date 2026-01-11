@@ -46,7 +46,7 @@ export const sentencePartsData = [
   },
   {
     id: "p10",
-    text: "Hühnchenstreifen",
+    text: "Hähnchenstreifen",
     category: "object"
   },
   {

@@ -100,10 +100,10 @@ export default function ResultsPage() {
       id: "meat-chicken-vegetarian",
       label: "vegetarische Hühnchenstreifen",
       variants: [
-        "Das Sandwich soll vegetarische Hühnchenstreifen enthalten.",
-        "Das Sandwich muss vegetarische Hühnchenstreifen enthalten.",
-        "Das Sandwich soll vegetarische Hühnchenstreifen enthalten falls verfügbar.",
-        "Das Sandwich muss vegetarische Hühnchenstreifen enthalten falls verfügbar.",
+        "Das Sandwich soll vegetarische Hähnchenstreifen enthalten.",
+        "Das Sandwich muss vegetarische Hähnchenstreifen enthalten.",
+        "Das Sandwich soll vegetarische Hähnchenstreifen enthalten falls verfügbar.",
+        "Das Sandwich muss vegetarische Hähnchenstreifen enthalten falls verfügbar.",
       ],
     },
   ];

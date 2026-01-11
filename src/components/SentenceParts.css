@@ -21,7 +21,7 @@
 }
 
 .category-start {
-  background-color: #cce4ff;
+  background-color: rgb(from var(--color-turquoise) r g b / 0.5);
 }
 
 .category-verb {

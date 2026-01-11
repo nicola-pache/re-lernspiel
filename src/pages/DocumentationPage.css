@@ -65,22 +65,22 @@
 }
 
 .category-start {
-  background-color: #cce4ff;
+  background-color: rgb(from var(--color-turquoise) r g b / 0.2);
 }
 
 
 .category-verb {
-  background-color: #fff3b0;
+  background-color: rgb(from var(--color-yellow) r g b / 0.2);
 }
 
 
 .category-object {
-  background-color: #d4ffd6;
+  background-color: rgb(from var(--color-green) r g b / 0.2);
 }
 
 
 .category-misc {
-  background-color: #ffd6d6;
+  background-color: rgb(from var(--color-pink) r g b / 0.2);
 }
 
 .go-to-dev-button {
