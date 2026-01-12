@@ -17,3 +17,11 @@ Interaktive Maskottchen-Erklärungen – Lerninhalte mit kurzen Tipps und Erklä
 Dynamische Fehleranalyse – zeigt Abweichungen von „perfekten“ Sandwichen und fehlende Anforderungen.
 
 Gamification – Punkte/Fehleranalyse als spielerisches Feedback.
+
+
+
+Befehle zum Ausführen:
+
+npm install
+
+npm run
