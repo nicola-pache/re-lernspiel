@@ -5,6 +5,7 @@ import SandwichBuilder from "../components/SandwichBuilder";
 import { useCallback, useState } from "react";
 import type { SandwichSelection } from "../types";
 import CodyOverlay from "../components/CodyOverlay";
+import NavigationButton from "../components/NavigationButton";
 
 export default function DevelopmentPage() {
   const location = useLocation();
@@ -79,9 +80,10 @@ export default function DevelopmentPage() {
             <SandwichPreview selection={selection} />
           </div>
 
-          <button className="go-to-results-button" onClick={handleGoToResults}>
-            Weiter zur Bewertung
-          </button>
+          <NavigationButton
+            onClick={handleGoToResults}
+            label="Weiter zur Bewertung"
+          />
         </div>
       </div>
     </>

@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import NotesField from "../components/NotesField";
 import ChatWindow from "../components/ChatWindow";
 import CodyOverlay from "../components/CodyOverlay";
+import NavigationButton from "../components/NavigationButton";
 
 export default function AnforderungserhebungPage() {
   const navigate = useNavigate();
@@ -151,15 +152,12 @@ export default function AnforderungserhebungPage() {
             Weiter zur Dokumentation
           </button>*/}
           {!isChoiceActive && !currentNode.next && (
-            <button
-              className="go-to-docs-button"
+            <NavigationButton
               onClick={() =>
                 navigate("/documentation", { state: { notes: notesText } })
               }
-            >
-              {" "}
-              Weiter zur Dokumentation{" "}
-            </button>
+              label="Weiter zur Dokumentation"
+            />
           )}
         </div>
       </div>

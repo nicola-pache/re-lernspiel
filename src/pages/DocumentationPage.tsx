@@ -8,6 +8,7 @@ import { sentencePartsData } from "../data/sentencePartsData";
 import "./DocumentationPage.css";
 import CodyOverlay from "../components/CodyOverlay";
 import { useState } from "react";
+import NavigationButton from "../components/NavigationButton";
 
 export default function DocumentationPage() {
   const location = useLocation();
@@ -99,16 +100,14 @@ export default function DocumentationPage() {
               )}
             </Droppable>
           </DragDropContext>
-          <button
-            className="go-to-dev-button"
+          <NavigationButton
             onClick={() =>
               navigate("/development", {
                 state: { finalSentences: finalSentences },
               })
             }
-          >
-            Weiter zur Entwicklung
-          </button>
+            label="Weiter zur Entwicklung"
+            />
         </div>
       </div>
     </>

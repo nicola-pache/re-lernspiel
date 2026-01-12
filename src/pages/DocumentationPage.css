@@ -82,21 +82,3 @@
 .category-misc {
   background-color: rgb(from var(--color-pink) r g b / 0.2);
 }
-
-.go-to-dev-button {
-  grid-column: 3;
-  justify-self: end;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--color-primary);
-  color: white;
-  border: none;
-  border-radius: 0.5rem;
-  font-size: var(--font-size-body1);
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.go-to-dev-button:hover {
-  background-color: var(--color-primary-dark);
-}
